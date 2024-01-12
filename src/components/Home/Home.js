@@ -4,19 +4,19 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Container from '../Layout/Container';
 import Header from '../Layout/Header';
 
-import Visualizar_disciplinas from '../Pages/VisualizarDisciplinas';
-import Organizar_semestres from '../Pages/OrganizarSemestres'; 
+import VisualizarDisciplinas from '../Pages/VisualizarDisciplinas';
+import OrganizarSemestres from '../Pages/OrganizarSemestres'; 
 
 import styles from './Home.module.css'
 
 function App() {
   return (
     <Router className={styles.router}>
-      <Header></Header>
+      <Header/>
       <Container>
         <Routes>
-          <Route path='/VisualizarDisciplinas' element={<Visualizar_disciplinas/>}/>
-          <Route path='/OrganizarSemestres' element={<Organizar_semestres/>}/>
+          <Route path='/VisualizarDisciplinas' element={<VisualizarDisciplinas/>}/>
+          <Route path='/OrganizarSemestres' element={<OrganizarSemestres/>}/>
         </Routes>
       </Container>
     </Router>

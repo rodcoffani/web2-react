@@ -1,7 +1,7 @@
-function Visualizar_disciplinas() {
+function VisualizarDisciplinas() {
     return (
         <p>Visualizar Disciplinas</p>
     )
 }
 
-export default Visualizar_disciplinas
+export default VisualizarDisciplinas

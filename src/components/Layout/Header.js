@@ -3,26 +3,25 @@ import menuStyles from './MenuLateral.module.css'
 
 import MenuLateral from "./MenuLateral"
 import NavBar from "./NavBar"
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function Header() {
-    const menu = document.getElementById("menu")
     
-    function mudarMenu() {
-        if (menu.classList.contains("menu_lateral")) 
-            console.log("Fechar menu")  
-            // fecharMenu()
-        else  
-            console.log("Abrir menu")
-            // abrirMenu()
-    }
+    const [menuAberto, setMenuAberto] = useState(false) 
     
+    const teste = menuAberto ? 'aberto' : 'fechado'
+
     return(
         <div className={styles.header}>
-            <NavBar handleMenu={mudarMenu}/>
-            <div className={`${menuStyles.menu_lateral} + ${menuStyles.active}`} id='menu'>
-
-            </div>
-        </div>
+            <NavBar handleMenu={() => {setMenuAberto(!menuAberto)}}/>
+            <menu className={`${menuStyles.menu_lateral} ${menuAberto ? menuStyles.active : ''}`}>
+                <ul>
+                <li><Link to={'/VisualizarDisciplinas'} onClick={() => {setMenuAberto(!menuAberto)}}>Visualizar Disciplinas</Link></li>
+                <li><Link to={'/OrganizarSemestres'} onClick={() => {setMenuAberto(!menuAberto)}}>Organizar Semestres</Link></li>
+                </ul>
+            </menu>
+        </div> 
     )
 }
 

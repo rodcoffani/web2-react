@@ -7,19 +7,15 @@ import { faBars, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 function NavBar({handleMenu}){
   return(
     <nav className={styles.navbar}>
-    <button onClick={mudarMenu} className={styles.icon_button} id='botao_menu'><FontAwesomeIcon icon={faBars}/></button>
+    <button onClick={handleMenu} className={styles.icon_button} id='botao_menu'><FontAwesomeIcon icon={faBars}/></button>
 
-    <Link to={'/Visualizar_disciplinas'} className={styles.ufscar_logo}>UFSCAR</Link>
+    <Link to={'/VisualizarDisciplinas'} className={styles.ufscar_logo}>UFSCAR</Link>
 
     <input type='text' placeholder='Buscar Disciplina' className={styles.search_bar}/>
 
     <button className={styles.icon_button}><FontAwesomeIcon icon={faMagnifyingGlass}/></button> 
   </nav>
   )
-
-  function mudarMenu() {
-    handleMenu()
-  }
 }
 
 
