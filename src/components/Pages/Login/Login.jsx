@@ -3,7 +3,7 @@
 import React from 'react';
 import './Login.css';
 
-import LoginForm from '../Forms/LoginForm/LoginForm';
+import LoginForm from '../../Layouts/Forms/LoginForm/LoginForm';
 
 function Login() {
   return (
