@@ -1,0 +1,10 @@
+.menu_lateral{
+    position: relative;
+    height: 100%;
+    background-color: green;
+    left: -100%;
+}
+
+.active {
+    transform: translateX(100%);
+}
