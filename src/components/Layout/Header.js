@@ -16,9 +16,9 @@ function Header() {
         <div className={styles.header}>
             <NavBar handleMenu={() => {setMenuAberto(!menuAberto)}}/>
             <menu className={`${menuStyles.menu_lateral} ${menuAberto ? menuStyles.active : ''}`}>
-                <ul>
-                <li><Link to={'/VisualizarDisciplinas'} onClick={() => {setMenuAberto(!menuAberto)}}>Visualizar Disciplinas</Link></li>
-                <li><Link to={'/OrganizarSemestres'} onClick={() => {setMenuAberto(!menuAberto)}}>Organizar Semestres</Link></li>
+                <ul className={menuStyles.list_link}>
+                <li ><Link className={menuStyles.link} to={'/VisualizarDisciplinas'} onClick={() => {setMenuAberto(!menuAberto)}}>Visualizar Disciplinas</Link></li>
+                <li ><Link className={menuStyles.link} to={'/OrganizarSemestres'} onClick={() => {setMenuAberto(!menuAberto)}}>Organizar Semestres</Link></li>
                 </ul>
             </menu>
         </div> 

@@ -1,13 +1,39 @@
 .menu_lateral{
     position: relative;
     height: 100%;
-    background-color: green;
+    background-color: #cccccc;
     left: -100%;
     transition: all 0.2s ease-in-out;
+    z-index: 1;
 }
 
 .active {
     transform: translateX(100%);
     transition: all 0.2s ease-in-out;
-    z-index: 1;
+}
+
+.list_link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    list-style: none;
+    gap: 15px 0;
+}
+
+.list_link li {
+    padding: 16px 38px;
+    border-radius: 100px;
+    background-color: #FFDAD8;
+}
+
+.list_link li:hover{
+    background-color: #E4C3C3;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
 }
