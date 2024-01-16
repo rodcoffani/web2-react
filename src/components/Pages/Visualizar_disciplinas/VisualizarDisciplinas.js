@@ -1,6 +1,6 @@
 function VisualizarDisciplinas() {
     return (
-        <p>Visualizar Disciplinas</p>
+        <p></p>
     )
 }
 

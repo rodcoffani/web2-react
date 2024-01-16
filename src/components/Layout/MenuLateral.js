@@ -1,22 +1,17 @@
 import styles from "./MenuLateral.module.css"
 
-function MenuLateral({ handleMenu }){
-    return (
-        <div className={`${styles.menu_lateral} + ${styles.active}`}>
+import { Link } from 'react-router-dom'
 
-        </div>
-    )
+
+function MenuLateral({ handleMenu, menuAberto}){
+  return (
+    <ul className={`${styles.menu_lateral} ${menuAberto ? styles.active : ''}`}>
+      <li ><Link className={styles.link} to={'/VisualizarDisciplinas'} onClick={handleMenu}>Visualizar Disciplinas</Link></li>
+      <li ><Link className={styles.link} to={'/OrganizarSemestres'} onClick={handleMenu}>Organizar Semestres</Link></li>
+    </ul>
+  )
 }
 
-const menu = document.getElementById("menu")
 
-function mudarMenu() {
-  if (menu.classList.contains("active") === true) 
-    console.log("Fechar menu")
-    // fecharMenu()
-  else  
-    console.log("Abrir menu")
-    // abrirMenu()
-}
 
 export default MenuLateral

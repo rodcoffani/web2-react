@@ -5,14 +5,7 @@
     left: -100%;
     transition: all 0.2s ease-in-out;
     z-index: 1;
-}
-
-.active {
-    transform: translateX(100%);
-    transition: all 0.2s ease-in-out;
-}
-
-.list_link{
+    align-items: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,13 +14,18 @@
     gap: 15px 0;
 }
 
-.list_link li {
+.active {
+    transform: translateX(100%);
+    transition: all 0.2s ease-in-out;
+}
+
+.menu_lateral li {
     padding: 16px 38px;
     border-radius: 100px;
     background-color: #FFDAD8;
 }
 
-.list_link li:hover{
+.menu_lateral li:hover{
     background-color: #E4C3C3;
 }
 
