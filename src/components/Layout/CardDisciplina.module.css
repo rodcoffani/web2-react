@@ -1,0 +1,30 @@
+.cartao_disciplina{
+    width: 80%;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.informacoes_disciplina{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 6px 0;
+    margin: 6px 5px;
+    padding-left: 4px;
+    border-left: 1px black solid;
+}
+
+.nome_disciplina{
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.informacao{
+    font-size: 12px;
+}

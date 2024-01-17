@@ -1,14 +1,15 @@
-import styles from "./VisualizarDisciplinas.module.css"
+import { useEffect, useState } from "react"
+import disciplinas from './../../../disciplinas.json'
+import CardDisciplina from "../../Layout/CardDisciplina"
+
+import style from './VisualizarDisciplinas.module.css'
 
 function VisualizarDisciplinas() {
     return (
-        <div className={styles.cartao_disciplina}>
-            <h2 className={styles.nome_disciplina}>Introdução ao Pensamento Algorítmico</h2>
-            <div className={styles.informacoes_disciplina}>
-                <p className={styles.informacao}>LD - Obreigatória</p>
-                <p className={styles.informacao}>8 créditos</p>
-                <p className={styles.informacao}>Não Possui Pré-Requisito</p>
-            </div>
+        <div className={style.disciplinas}>
+            {disciplinas.map((disciplina) => {
+                return(<CardDisciplina nomeDisciplina={disciplina.nome} sigla={disciplina.sigla} categoria={disciplina.categoria} creditos={disciplina.creditos}/>)
+            })}
         </div>
     )
 }
