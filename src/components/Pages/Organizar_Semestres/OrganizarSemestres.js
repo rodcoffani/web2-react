@@ -1,6 +1,6 @@
 function Organizar_semestres() {
     return (
-        <p>Organizar Semestres </p>
+        <p>Organizar sdfgsdfgSemestres </p>
     )
 }
 
