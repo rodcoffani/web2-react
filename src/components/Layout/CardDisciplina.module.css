@@ -1,5 +1,5 @@
 .cartao_disciplina{
-    width: 80%;
+    width: 100%;
     background-color: #D9D9D9;
     border-radius: 10px;
     display: grid;
@@ -26,5 +26,18 @@
 }
 
 .informacao{
+    display: flex;
     font-size: 12px;
+}
+
+.check{
+    color: rgb(25, 182, 25);
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.xmark{
+    color: rgb(195, 25, 25);
+    font-size: 15px;
+    margin-left: 5px;  
 }

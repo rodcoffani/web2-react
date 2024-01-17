@@ -1,14 +1,20 @@
 import { useEffect, useState } from "react"
-import disciplinas from './../../../disciplinas.json'
-import CardDisciplina from "../../Layout/CardDisciplina"
+
+import grupos from './../../../disciplinas.json'
+
+import MostrarSemestres from './MostrarSemestre'
 
 import style from './VisualizarDisciplinas.module.css'
 
 function VisualizarDisciplinas() {
+
+    let disciplinasArray, requisitosArray
+
     return (
         <div className={style.disciplinas}>
-            {disciplinas.map((disciplina) => {
-                return(<CardDisciplina nomeDisciplina={disciplina.nome} sigla={disciplina.sigla} categoria={disciplina.categoria} creditos={disciplina.creditos}/>)
+            {grupos.map((grupo) => {
+                disciplinasArray = grupo.disciplinas
+                return(<MostrarSemestres grupo={grupo}/>)
             })}
         </div>
     )
