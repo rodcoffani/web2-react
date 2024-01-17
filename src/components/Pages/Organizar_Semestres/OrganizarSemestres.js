@@ -1,6 +1,22 @@
+import styles from './OrganizarSemestres.module.css'
+
+import QuadroInformacoes from "./QuadroInformacoes"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlay } from '@fortawesome/free-solid-svg-icons'
+
+
 function Organizar_semestres() {
+
+    var semestreAnalisado = '2024/2', semestreAtual = '2023/2', creditosDisponiveis = '15/30'
+
     return (
-        <p>Organizar sdfgsdfgSemestres </p>
+        <div className={styles.organizar_semestres}>
+            <QuadroInformacoes semestreAnalisado={semestreAnalisado} semestreAtual={semestreAtual} creditosDisponiveis={creditosDisponiveis}/>
+
+            <button className={styles.botao_grade_horaria}><FontAwesomeIcon className={styles.icon} icon={faPlay}/>Grade Horária</button>
+
+            
+        </div>
     )
 }
 

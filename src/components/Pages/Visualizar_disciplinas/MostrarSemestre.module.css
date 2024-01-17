@@ -1,7 +1,16 @@
 .semestre{
     width: 80%;
+    margin-bottom: 10px;
 }
 
 .titulo_semestre{
+    border: none;
+    font-size: 18px;
+    width: 100%;
     border-bottom: 1px black solid;
+    text-align: start;
+}
+
+.semestre_fechado{
+    display: none;    
 }

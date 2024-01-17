@@ -1,5 +1,6 @@
 .menu_lateral{
     position: relative;
+    top: 10%;
     height: 100%;
     background-color: #cccccc;
     left: -100%;
