@@ -1,12 +1,27 @@
 .semestre{
-    width: 80%;
+    width: 90%;
     margin-bottom: 10px;
 }
 
 .titulo_semestre{
     border: none;
+    border-bottom: 1px black solid;
     font-size: 18px;
     width: 100%;
-    border-bottom: 1px black solid;
     text-align: start;
+    margin-bottom: 10px;
+}
+
+.grupo_disciplinas{
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+}
+
+@media screen and (min-width: 750px){
+    .grupo_disciplinas{
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        gap: 15px 5%;
+    }
 }

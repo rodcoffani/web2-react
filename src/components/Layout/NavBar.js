@@ -9,7 +9,7 @@ function NavBar({handleMenu}){
     <nav className={styles.navbar}>
     <button onClick={handleMenu} className={styles.icon_button} id='botao_menu'><FontAwesomeIcon icon={faBars}/></button>
 
-    <Link to={'/VisualizarDisciplinas'} className={styles.ufscar_logo}>UFSCAR</Link>
+    <Link to={'/'} className={styles.ufscar_logo}>UFSCAR</Link>
 
     <input type='text' placeholder='Buscar Disciplina' className={styles.search_bar}/>
 

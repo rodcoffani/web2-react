@@ -12,7 +12,7 @@ function App() {
       <Header/>
       <Container>
         <Routes>
-          <Route path='/VisualizarDisciplinas' element={<VisualizarDisciplinas/>}/>
+          <Route path='/' element={<VisualizarDisciplinas/>}/>
           <Route path='/OrganizarSemestres' element={<OrganizarSemestres/>}/>
         </Routes>
       </Container>

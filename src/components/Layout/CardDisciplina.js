@@ -1,11 +1,11 @@
 import styles from './CardDisciplina.module.css'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons'
+import PreRequisito from './PreRequisito'
 
-function CardDisciplina({nomeDisciplina, sigla, categoria, creditos, requisito}){
+const windowWidthBiggerThan750 = (window.innerWidth > 750)
 
-    const check = <FontAwesomeIcon icon={faCheck}/>
+function CardDisciplina({nomeDisciplina, sigla, categoria, creditos, requisitos}){
+    console.log(windowWidthBiggerThan750)
 
     return(
         <div className={styles.cartao_disciplina}>
@@ -13,7 +13,7 @@ function CardDisciplina({nomeDisciplina, sigla, categoria, creditos, requisito})
             <div className={styles.informacoes_disciplina}>
                 <p className={styles.informacao}>{sigla} - {categoria}</p>
                 <p className={styles.informacao}>{creditos} créditos</p>
-                <p className={styles.informacao}>Pré-requisito: {(requisito.length == 0) ? <FontAwesomeIcon icon={faCheck} className={styles.check}/> : <FontAwesomeIcon icon={faXmark} className={styles.xmark}/>} </p>
+                <PreRequisito windowWidthBiggerThan750={windowWidthBiggerThan750} requisitos={requisitos}/>
             </div>
         </div>
     )
