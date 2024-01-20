@@ -1,6 +1,8 @@
 import styles from './OrganizarSemestres.module.css'
 
 import QuadroInformacoes from "./QuadroInformacoes"
+import DisciplinasSemestreEmAnalise from "./DisciplinasSemestreEmAnalise"
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
 
@@ -15,7 +17,7 @@ function Organizar_semestres() {
 
             <button className={styles.botao_grade_horaria}><FontAwesomeIcon className={styles.icon} icon={faPlay}/>Grade Horária</button>
 
-            
+            <DisciplinasSemestreEmAnalise/>
         </div>
     )
 }

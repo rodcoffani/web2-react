@@ -13,8 +13,7 @@ function VisualizarDisciplinas() {
     return (
         <div className={style.disciplinas}>
             {grupos.map((grupo) => {
-                disciplinasArray = grupo.disciplinas
-                return(<MostrarSemestres grupo={grupo}/>)
+                return(<MostrarSemestres grupo={grupo} key={grupo.grupo}/>)
             })}
         </div>
     )
