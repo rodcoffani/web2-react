@@ -8,10 +8,8 @@
     display: grid;
     grid-template-columns: 20% 60% 20%;
     align-items: center;
-}
-
-.search_bar{
-    display: none;
+    justify-items: center;
+    user-select: none;
 }
 
 .ufscar_logo{
@@ -27,4 +25,43 @@
     background-color: transparent;
     color: white;
     font-size: 28px;
+}
+
+.desktop{
+    display: none;
+}
+
+@media screen and (min-width: 750px) {
+    .icon_button{
+        display: none;
+    }
+    
+    .desktop{
+        display: block;
+    }
+
+    .navbar {
+        grid-template-columns: 20% 40% 20% 20%;
+    }
+
+    .search_bar{
+        border: none;
+        border-radius: 20px;
+        padding: 12px 0 12px 15px;
+        width: 90%;
+        outline: none;
+    }
+
+    .link{
+        width: 70%;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        border-radius: 20px;
+        padding: 8px;
+    }
+    
+    .link:hover{
+        box-shadow: 0 0 5px 1px whitesmoke;
+    }
 }

@@ -28,6 +28,14 @@
     font-size: 12px;
 }
 
+.requisitoMobile{
+    display: block;
+}
+
+.requisitoDesktop{
+    display: none;
+}
+
 .check{
     color: rgb(25, 182, 25);
     font-size: 15px;
@@ -58,6 +66,20 @@
 
     .informacao{
         font-size: 16px;
+    }
+
+    .xmark{
+        font-size: 19px
+    }
+
+    .requisitoMobile{
+        display: none;
+    }
+    
+    .requisitoDesktop{
+        display: flex;
+        flex-direction: row;
+        gap: 0 10px;
     }
 
     .nome_disciplina{
