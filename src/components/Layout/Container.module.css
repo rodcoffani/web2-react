@@ -1,0 +1,23 @@
+.container {
+  position: relative;
+  top: 10%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+  
+.start {
+  justify-content: flex-start;
+}
+
+.column {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.min-height {
+  min-height: 75%;
+}

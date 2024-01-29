@@ -1,0 +1,44 @@
+.login-content {
+  background-color: #ECE6F0;
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+.login-content h1 {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 1rem 0
+}
+
+.login-content .login-form {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+
+.login-content .login-form button {
+  padding: 10px;
+  line-height: 1.5rem;
+  border: none;
+  font-family: 'Lato', 'Ubuntu', sans-serif;
+  font-size: large;
+  color: #FFFFFF;
+  border-radius: 5px;
+  background-color: #982727;
+  cursor: pointer;
+}
+
+.login-content .login-form button:hover {
+  background-color: #7A1F1F;
+}
+
+.login-content .login-form .back-link {
+  text-decoration: none;
+  color: #5a5a5a;
+  font-family: 'Lato', 'Ubuntu', sans-serif;
+  font-size: medium;
+}

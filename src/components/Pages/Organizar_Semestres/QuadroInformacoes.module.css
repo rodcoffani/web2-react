@@ -1,0 +1,18 @@
+.quadro_informacoes{
+    margin-top: 15px;
+    background-color: #FFACAC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    border-radius: 10px;
+    gap: 20px 0;
+    padding: 10px 20px;
+}
+
+.informacao{
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    justify-content: space-between;
+}

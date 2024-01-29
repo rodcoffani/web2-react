@@ -1,0 +1,95 @@
+.cartao_disciplina{
+    width: 100%;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    align-items: center;
+}
+
+.informacoes_disciplina{
+    display: flex;
+    flex-direction: column;
+    gap: 6px 0;
+    margin: 6px 5px;
+    padding-left: 4px;
+    border-left: 1px black solid;
+}
+
+.nome_disciplina{
+    text-align: center;
+    padding-left: 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.informacao{
+    display: flex;
+    font-size: 12px;
+}
+
+.requisitoMobile{
+    display: block;
+}
+
+.requisitoDesktop{
+    display: none;
+}
+
+.check{
+    color: rgb(25, 182, 25);
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.xmark{
+    color: rgb(195, 25, 25);
+    font-size: 15px;
+    margin-left: 5px;  
+}
+
+@media screen and (min-width:750px){
+    .cartao_disciplina{
+        height: 150px;
+        grid-template-columns: 100%;
+        grid-template-rows: 40% 60%;
+        justify-content: center;
+    }
+
+    .informacoes_disciplina{
+        height: 100%;
+        align-items: center;
+        padding-top: 10px;
+        border-left: none;
+        border-top: 1px solid black;
+    }
+
+    .informacao{
+        font-size: 16px;
+    }
+
+    .xmark{
+        font-size: 19px
+    }
+
+    .requisitoMobile{
+        display: none;
+    }
+    
+    .requisitoDesktop{
+        display: flex;
+        flex-direction: row;
+        gap: 0 10px;
+    }
+
+    .nome_disciplina{
+        height: 100%;
+        font-weight: 600;
+        font-size: 18px;
+        margin: 0;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
