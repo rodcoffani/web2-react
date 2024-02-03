@@ -36,8 +36,7 @@ function LoginForm() {
         } else if (conteudo && conteudo.erro && conteudo.erro === "senha incorreta") {
           console.log('Senha incorreta');
         } else {
-          // Redirecionamento para outra página
-          navigate('/VisualizarDisciplinas/{ra}');
+          navigate('/VisualizarDisciplinas/${email}');
         }
       })
       .catch(error => {
