@@ -5,6 +5,7 @@ import Header from '../Layout/Header';
 
 import VisualizarDisciplinas from '../Pages/Visualizar_disciplinas/VisualizarDisciplinas';
 import OrganizarSemestres from '../Pages/Organizar_Semestres/OrganizarSemestres'; 
+import Login from '../Pages/Login/Login'
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       <Header/>
       <Container>
         <Routes>
-          <Route path='/' element={<VisualizarDisciplinas/>}/>
+          <Route path='/' element={<Login/>}/>
+          <Route path='/VisualizarDisciplinas' element={<VisualizarDisciplinas/>}/>
           <Route path='/OrganizarSemestres' element={<OrganizarSemestres/>}/>
         </Routes>
       </Container>

@@ -12,7 +12,7 @@ function NavBar({handleMenu}){
     <Link to={'/'} className={styles.ufscar_logo}>UFSCAR</Link>
 
     <input type='text' placeholder='Buscar Disciplina' className={`${styles.search_bar} ${styles.desktop}`}/>
-    <Link className={`${styles.link} ${styles.desktop}`} to={'/'}>Visualizar Disciplinas</Link>
+    <Link className={`${styles.link} ${styles.desktop}`} to={'/visualizarDisciplinas'}>Visualizar Disciplinas</Link>
     <Link className={`${styles.link} ${styles.desktop}`} to={'/OrganizarSemestres'}>Organizar Disciplinas</Link>
     
 

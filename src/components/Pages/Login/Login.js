@@ -5,7 +5,7 @@ import './Login.css';
 
 import LoginForm from '../../Layouts/Forms/LoginForm/LoginForm';
 
-function Login() {
+function  Login() {
   return (
     <div className='login-container'>
       <div className="login-background">
