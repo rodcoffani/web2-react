@@ -15,7 +15,7 @@ function App() {
 
   return (
     <Router>
-      {!logado && <Login handleSubmit={() => {setLogado(!logado)}} logado={logado}/>}
+      {!logado && <Login handleSubmit={(status) => setLogado(status)} logado={logado}/>}
       {logado && (
         <>
           <Header/>

@@ -8,11 +8,41 @@ function LoginForm({handleSubmit, logado}) {
   const [password, setPassword] = useState('')
   const navigate = useNavigate()
 
-  const handleLogin = (e) => {
-    e.preventDefault()
-    console.log(email, password)
+  async function handleLogin(event) {
+    event.preventDefault();
+
+    const requestOptions = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json; charset=UTF-8',
+      },
+      body: JSON.stringify({
+        'ra': email,
+        'senha': password
+      }),
+    };
+
+    fetch('http://localhost:8000/login', requestOptions)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Not ok');
+        }
+        return response.json();
+      })
+      .then(conteudo => {
+        if (conteudo && conteudo.erro && conteudo.erro === "aluno não encontrado") {
+          console.log('Aluno não encontrado');
+        } else if (conteudo && conteudo.erro && conteudo.erro === "senha incorreta") {
+          console.log('Senha incorreta');
+        } else {
+          handleSubmit(true);
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
   }
-  console.log(logado)
+  
   return (
   <div className={styles.login_content}>
     <h1>Login</h1>
@@ -21,10 +51,8 @@ function LoginForm({handleSubmit, logado}) {
 
       <TextInput label="Senha" value={password} setter={setPassword} isPassword={true} />
       
-      <button className={styles.button} type="submit" onClick={handleSubmit}>Entrar</button>
-      <Link className={styles.back_link} to="/register">
-        <span>Não tenho cadastro</span>
-      </Link>
+      <button className={styles.button} type="submit" onClick={handleLogin}>Entrar</button>
+
     </form>
   </div>
   )
