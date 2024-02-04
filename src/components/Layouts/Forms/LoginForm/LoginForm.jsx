@@ -7,7 +7,7 @@ import userEvent from '@testing-library/user-event';
 function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate(); // Utilize useNavigate para obter a função de navegação
+  const navigate = useNavigate(); 
 
   async function handleLogin(event) {
     event.preventDefault();
