@@ -1,0 +1,15 @@
+.dia{
+    display: grid;
+    grid-template-rows: 16% 12% 12% 12% 12% 12% 12%;
+}
+
+.nome_dia{
+    border-bottom: 1px #fff solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.horarios{
+    border-bottom: 1px #fff solid;
+}
