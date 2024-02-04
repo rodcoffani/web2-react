@@ -1,9 +1,9 @@
 import React from 'react';
-import './TextInput.css'
+import styles from './TextInput.module.css'
 
 const TextInput = ({label, value, setter, isPassword = false}) => {
   return (
-    <div className="text-input">
+    <div className={styles.text_input}>
       <label>{label}</label>
       <input
         type={ isPassword ? 'password' : 'text'}

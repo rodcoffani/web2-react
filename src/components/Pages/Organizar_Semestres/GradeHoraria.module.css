@@ -1,0 +1,7 @@
+.tabela{
+    background-color: #cccccc;
+    height: 80%;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%; 
+}
