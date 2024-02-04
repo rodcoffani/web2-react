@@ -4,7 +4,7 @@ import CardDisciplinasGrade from '../../Layout/CardDisciplinasGrade'
 
 import styles from './MostrarDisciplinasGrade.module.css'
 
-function MostrarSemestres({grupo}){
+function MostrarDisciplinasGrade({grupo}){
     
     var disciplinas = grupo.disciplinas, requisitosArray
 
@@ -27,4 +27,4 @@ function MostrarSemestres({grupo}){
     )
 }
 
-export default MostrarSemestres
+export default MostrarDisciplinasGrade
