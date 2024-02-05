@@ -7,7 +7,7 @@ export function MessageBanner({ content, type }) {
     } else if (type === 'error') {
         bannerColorClasses = 'bg-red-200 dark:bg-red-900 dark:text-white';
     } else {
-        throw 'Banner must be either warning, info or error';
+        throw new Error('Banner must be either warning, info or error');
     }
 
     const bannerClasses = bannerColorClasses + ' text-center rounded p-2 w-full max-w-lg text-sm';

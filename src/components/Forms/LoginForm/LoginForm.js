@@ -3,56 +3,48 @@ import { MessageBanner } from '../../messageBanner';
 import styles from './LoginForm.module.css';
 import TextInput from '../TextInput/TextInput';
 
-function LoginForm({ handleSubmit }) {
-  const [email, setEmail] = useState('');
+async function loginUser(credentials) {
+  return fetch('http://localhost:8000/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(credentials),
+  }).then((data) => data.json());
+}
+
+function LoginForm({ setLogado }) {
+  const [ra, setRA] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
-  async function handleLogin(event) {
-    event.preventDefault();
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    const response = await loginUser({
+      ra,
+      password,
+    });
 
-    const requestOptions = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json; charset=UTF-8',
-      },
-      body: JSON.stringify({
-        ra: email,
-        senha: password,
-      }),
-    };
-
-    try {
-      const response = await fetch('http://localhost:8000/login', requestOptions);
-      if (!response.ok) {
-        throw new Error('Not ok');
-      }
-
-      const conteudo = await response.json();
-
-      if (conteudo && conteudo.erro && conteudo.erro === 'aluno não encontrado') {
-        console.log('Aluno não encontrado');
-        setErrorMessage('RA não encontrado');
-      } else if (conteudo && conteudo.erro && conteudo.erro === 'senha incorreta') {
-        console.log('Senha incorreta');
-        setErrorMessage('Senha incorreta');
-      } else {
-        handleSubmit(true);
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      setErrorMessage('Erro ao realizar o login');
+    if (!response.success) {
+      setErrorMessage('Not OK');
     }
-  }
+
+    setLogado(response.token);
+  };
 
   return (
     <div className={styles.login_content}>
       <h1>Login</h1>
       {errorMessage && <MessageBanner type='error' content={errorMessage} />}
       <form className={styles.login_form} onSubmit={handleLogin}>
-        <TextInput label='RA' value={email} setter={setEmail} />
+        <TextInput label='RA' value={ra} setter={setRA} />
 
-        <TextInput label='Senha' value={password} setter={setPassword} isPassword={true} />
+        <TextInput
+          label='Senha'
+          value={password}
+          setter={setPassword}
+          isPassword={true}
+        />
 
         <button className={styles.button} type='submit'>
           Entrar
