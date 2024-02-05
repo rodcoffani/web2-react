@@ -4,8 +4,8 @@ import useToken from '../auth/useToken';
 
 import Login from '../Pages/Login/Login';
 
-import Container from '../Layout/Container/Container';
-import Header from '../Layout/Header/Header';
+import Container from '../Layout/Container';
+import Header from '../Layout/Header';
 
 import VisualizarDisciplinas from '../Pages/VisualizarDisciplinas/VisualizarDisciplinas';
 import OrganizarSemestres from '../Pages/OrganizarSemestres/OrganizarSemestres';

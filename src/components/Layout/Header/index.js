@@ -1,7 +1,5 @@
-import styles from './Header.module.css'
-
-import MenuLateral from "../MenuLateral/MenuLateral"
-import NavBar from "../NavBar/NavBar"
+import MenuLateral from "../MenuLateral"
+import NavBar from "../NavBar"
 
 import { useState } from 'react'
 
@@ -10,7 +8,7 @@ function Header() {
     const [menuAberto, setMenuAberto] = useState(false) 
     
     return(
-        <div className={styles.header}>
+        <div className="absolute w-full h-full">
             <NavBar handleMenu={() => {setMenuAberto(!menuAberto)}}/>
             <MenuLateral handleMenu={() => {setMenuAberto(!menuAberto)}} menuAberto={menuAberto}/>
         </div> 
