@@ -26,8 +26,6 @@ function Organizar_semestres() {
                 {
                     window.innerWidth <= 750 ? (gradeHoraria ? <GradeHoraria/> : '') : <GradeHoraria/>             
                 }
-                {console.log(gradeHoraria)
-}
             </section>
 
         </div>

@@ -11,8 +11,8 @@
 }
 
 .login_content .login_form {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,4 +41,12 @@
   color: #5a5a5a;
   font-family: 'Lato', 'Ubuntu', sans-serif;
   font-size: medium;
+}
+
+@media screen and (max-width: 750px){
+  
+  .login_content .login_form {
+    width: auto;
+    height: auto;
+  }
 }
