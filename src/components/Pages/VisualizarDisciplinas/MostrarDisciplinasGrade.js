@@ -1,10 +1,10 @@
 import { useState } from 'react'
 
-import CardDisciplina from '../../Layout/CardDisciplina'
+import CardDisciplinasGrade from '../../Layout/CardDisciplinaGrade/CardDisciplinasGrade'
 
-import styles from './MostrarSemestre.module.css'
+import styles from './MostrarDisciplinasGrade.module.css'
 
-function MostrarSemestres({grupo}){
+function MostrarDisciplinasGrade({grupo}){
     
     var disciplinas = grupo.disciplinas, requisitosArray
 
@@ -17,8 +17,7 @@ function MostrarSemestres({grupo}){
                 <div className={styles.grupo_disciplinas}>
                     {
                         disciplinas.map((disciplina) => {
-                            requisitosArray = disciplina.pre_requisitos
-                            return(<CardDisciplina nomeDisciplina={disciplina.nome} sigla={disciplina.sigla} categoria={disciplina.categoria} creditos={disciplina.creditos} requisitos={requisitosArray}/>)
+                            return(<CardDisciplinasGrade nomeDisciplina={disciplina.nome}/>)
                         })                
                     }
                 </div>
@@ -28,4 +27,4 @@ function MostrarSemestres({grupo}){
     )
 }
 
-export default MostrarSemestres
+export default MostrarDisciplinasGrade

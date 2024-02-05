@@ -1,7 +1,7 @@
 import styles from './Header.module.css'
 
-import MenuLateral from "./MenuLateral"
-import NavBar from "./NavBar"
+import MenuLateral from "../MenuLateral/MenuLateral"
+import NavBar from "../NavBar/NavBar"
 
 import { useState } from 'react'
 

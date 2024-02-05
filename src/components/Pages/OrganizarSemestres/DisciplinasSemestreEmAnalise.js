@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import MostrarDisciplinasGrade from '../Visualizar_disciplinas/MostrarDisciplinasGrade'
+import MostrarDisciplinasGrade from '../VisualizarDisciplinas/MostrarDisciplinasGrade'
 import styles from './DisciplinasSemestreEmAnalise.module.css'
 
 function DisciplinasSemestreEmAnalise(){

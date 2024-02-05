@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { MessageBanner } from '../../../messageBanner';
+import { MessageBanner } from '../../messageBanner';
 import styles from './LoginForm.module.css';
-import TextInput from '../../Fields/TextInput/TextInput';
+import TextInput from '../TextInput/TextInput';
 
 function LoginForm({ handleSubmit }) {
   const [email, setEmail] = useState('');

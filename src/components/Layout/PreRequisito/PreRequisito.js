@@ -1,4 +1,4 @@
-import styles from './CardDisciplina.module.css'
+import styles from '../CardDisciplina/CardDisciplina.module.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons'
