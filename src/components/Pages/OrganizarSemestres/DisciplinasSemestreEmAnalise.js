@@ -9,7 +9,7 @@ function DisciplinasSemestreEmAnalise(){
         async function getMaterias() {
             const response = await fetch("http://localhost:8000/materias");
             const disciplinas_semestre = await response.json();
-            setGrupos(disciplinas_semestre);
+            setGrupos(disciplinas_semestre.materias);
         }
 
         getMaterias();
