@@ -3,9 +3,8 @@
     background-color: #D9D9D9;
     border-radius: 10px;
     display: grid;
-    grid-template-columns: 45% 55%;
     align-items: center;
-    
+    justify-content: center;
 }
 
 .informacoes_disciplina{
@@ -35,16 +34,4 @@
 
 .requisitoDesktop{
     display: none;
-}
-
-.check{
-    color: rgb(25, 182, 25);
-    font-size: 15px;
-    margin-left: 5px;
-}
-
-.xmark{
-    color: rgb(195, 25, 25);
-    font-size: 15px;
-    margin-left: 5px;  
 }
