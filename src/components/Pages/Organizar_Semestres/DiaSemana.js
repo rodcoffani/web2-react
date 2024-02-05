@@ -9,19 +9,19 @@ function DiaSemana({nomeDia}){
     function drop(e) {
         e.preventDefault();
         var data = e.dataTransfer.getData("text");
-        e.target.appendChild(document.getElementById(data));
+        e.currentTarget.appendChild(document.getElementById(data));
     }
 
     return(
         <div className={styles.dia}>
             <div className={styles.nome_dia}>{nomeDia}</div>
-            <div className={styles.horarios} onDragOver={allowDrop} onDrag={drop}></div>
-            <div className={styles.horarios} onDragOver={allowDrop} onDrag={drop}></div>
-            <div className={styles.horarios} onDragOver={allowDrop} onDrag={drop}></div>
-            <div className={styles.horarios} onDragOver={allowDrop} onDrag={drop}></div>
-            <div className={styles.horarios} onDragOver={allowDrop} onDrag={drop}></div>
-            <div className={styles.horarios} onDragOver={allowDrop} onDrag={drop}></div>
-            <div className={styles.horarios} onDragOver={allowDrop} onDrag={drop}></div>
+            <div className={styles.horarios} onDragOver={allowDrop} onDrop={drop}></div>
+            <div className={styles.horarios} onDragOver={allowDrop} onDrop={drop}></div>
+            <div className={styles.horarios} onDragOver={allowDrop} onDrop={drop}></div>
+            <div className={styles.horarios} onDragOver={allowDrop} onDrop={drop}></div>
+            <div className={styles.horarios} onDragOver={allowDrop} onDrop={drop}></div>
+            <div className={styles.horarios} onDragOver={allowDrop} onDrop={drop}></div>
+            <div className={styles.horarios} onDragOver={allowDrop} onDrop={drop}></div>
         </div>
     )
 }

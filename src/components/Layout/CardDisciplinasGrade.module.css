@@ -1,0 +1,37 @@
+.cartao_disciplina{
+    width: 100%;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.informacoes_disciplina{
+    display: flex;
+    flex-direction: column;
+    gap: 6px 0;
+    margin: 6px 5px;
+    padding-left: 4px;
+    border-left: 1px black solid;
+}
+
+.nome_disciplina{
+    text-align: center;
+    padding-left: 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.informacao{
+    display: flex;
+    font-size: 12px;
+}
+
+.requisitoMobile{
+    display: block;
+}
+
+.requisitoDesktop{
+    display: none;
+}
