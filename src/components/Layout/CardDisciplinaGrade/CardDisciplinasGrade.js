@@ -1,15 +1,14 @@
 import styles from './CardDisciplinasGrade.module.css'
 
-function CardDisciplinasGrade({nomeDisciplina, siglaDisciplinas}){
-
+function CardDisciplinasGrade({nomeDisciplina, siglaDisciplinas, codigoDisciplina}){
     function dragStartHandler(ev) {
-        ev.dataTransfer.setData("text/plain", ev.target.id);
+        ev.dataTransfer.setData("id", ev.target.id);
     }
 
     return(
-        <div className={styles.cartao_disciplina} id={nomeDisciplina} draggable="true" onDragStart={dragStartHandler}>
+        <div className={styles.cartao_disciplina} id={codigoDisciplina} key={codigoDisciplina}  draggable="true" onDragStart={dragStartHandler}>
             <h2 className={`${styles.nome_disciplina} ${styles.mobile}`}>{siglaDisciplinas}</h2>
-            <h2 className={`${styles.nome_disciplina} ${styles.desktop}`}>{siglaDisciplinas}</h2>
+            <h2 className={`${styles.nome_disciplina} ${styles.desktop}`}>{nomeDisciplina}</h2>
         </div>
     )
 }

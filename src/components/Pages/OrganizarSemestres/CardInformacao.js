@@ -7,7 +7,7 @@ function CardInformacao({texto}){
     }
 
     return(
-        <p className={styles.card_informacao} id={texto} draggable="true" ondragstart={drag}>{texto}</p>
+        <p className={styles.card_informacao} id={texto}>{texto}</p>
     )
 }
 
