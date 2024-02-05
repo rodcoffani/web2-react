@@ -6,7 +6,7 @@ import styles from './MostrarDisciplinasGrade.module.css'
 
 function MostrarDisciplinasGrade({grupo}){
     
-    var disciplinas = grupo.disciplinas, requisitosArray
+    var disciplinas = grupo.disciplinas
 
     const [semestreFechado, setSemestreFechado] = useState(false)
 

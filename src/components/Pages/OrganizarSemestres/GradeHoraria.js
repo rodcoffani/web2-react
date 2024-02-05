@@ -1,8 +1,6 @@
 import DiaSemana from './DiaSemana'
 import styles from './GradeHoraria.module.css'
 
-import { useTable } from 'react-table'
-
 function GradeHoraria(){
     return(
         <div className={styles.tabela}>
