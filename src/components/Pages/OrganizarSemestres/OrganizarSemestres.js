@@ -10,17 +10,19 @@ import { useState } from 'react'
 
 function Organizar_semestres() {
 
-    var semestreAnalisado = '2024/2', semestreAtual = '2023/2', creditosDisponiveis = '15/30'
+    var semestreAtual = '2023/2', creditosDisponiveis = '15/30'
     const [gradeHoraria, setGradeHoraria] = useState(false)
+    const [semestreAnalisado, setSemestreAnalisado] = useState(1)
+
 
     return (
         <div className={styles.organizar_semestres}>
-            <QuadroInformacoes semestreAnalisado={semestreAnalisado} semestreAtual={semestreAtual} creditosDisponiveis={creditosDisponiveis}/>
+            <QuadroInformacoes semestreAtual={semestreAtual} creditosDisponiveis={creditosDisponiveis} handleSelect={setSemestreAnalisado}/>
 
             <button className={`${styles.botao_grade_horaria}`} onClick={() => (setGradeHoraria(!gradeHoraria))}><FontAwesomeIcon className={styles.icon} icon={faPlay}/>Grade Horária</button>
 
             <section className={`${styles.materias} ${gradeHoraria ? styles.grade_ativa : ''}`}>
-                <DisciplinasSemestreEmAnalise/>
+                <DisciplinasSemestreEmAnalise semestreAnalisado={semestreAnalisado}/>
                 {
                     window.innerWidth <= 750 ? (gradeHoraria ? <GradeHoraria/> : '') : <GradeHoraria/>             
                 }

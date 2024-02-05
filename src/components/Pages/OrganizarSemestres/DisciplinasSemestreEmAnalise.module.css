@@ -2,6 +2,5 @@
     background-color: #CCCCCC;
     border-radius: 10px;
     height: 80%;
-    overflow-y: scroll;
+    overflow: hidden;
 }
-

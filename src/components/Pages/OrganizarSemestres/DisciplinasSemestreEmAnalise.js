@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import MostrarDisciplinasGrade from '../VisualizarDisciplinas/MostrarDisciplinasGrade'
 import styles from './DisciplinasSemestreEmAnalise.module.css'
 
-function DisciplinasSemestreEmAnalise(){
+function DisciplinasSemestreEmAnalise({semestreAnalisado}){
     const [grupos, setGrupos] = useState([]);
 
     function allowDrop(e){
@@ -27,9 +27,8 @@ function DisciplinasSemestreEmAnalise(){
 
     return(
         <div className={styles.disciplinas_semestre} onDragOver={allowDrop} onDrop={drop} >
-            {grupos.map((grupo) => {
-                return(<MostrarDisciplinasGrade grupo={grupo} key={grupo.grupo}/>)
-            })}
+            {grupos && (<MostrarDisciplinasGrade grupo={grupos[semestreAnalisado - 1]}/>)}
+            {!grupos && (<div>Carregando</div>)}
         </div>        
     )
 }

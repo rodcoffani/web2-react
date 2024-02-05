@@ -1,5 +1,5 @@
 .semestre{
-    width: 90%;
+    width: 100%;
     margin-bottom: 10px;
     user-select: none;
 }
@@ -16,19 +16,13 @@
 }
 
 .grupo_disciplinas{
+    width: 100%;
     transform-origin: top;
     display: flex;
     flex-direction: column;
     gap: 5px 0;
-    /* transform: scaleY(1); */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-/* .fechado{
-    display: none;
-    transform: scaleY(0);
-    transition: all 500ms ease-in;
-} */
-
-/* .aberto{
-    
-} */
