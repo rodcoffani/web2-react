@@ -17,7 +17,7 @@ function MostrarDisciplinasGrade({grupo}){
                 <div className={styles.grupo_disciplinas}>
                     {
                         disciplinas.map((disciplina) => {
-                            return(<CardDisciplinasGrade nomeDisciplina={disciplina.nome}/>)
+                            return(<CardDisciplinasGrade nomeDisciplina={disciplina.nome} codigoDisciplina={disciplina.codigo}/>)
                         })                
                     }
                 </div>
