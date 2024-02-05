@@ -18,7 +18,7 @@ function App() {
   }
 
   return (
-    <Router>
+    <Router basename='web2-react'>
       <>
         <Header />
         <Container>
