@@ -6,11 +6,11 @@ import { useTable } from 'react-table'
 function GradeHoraria(){
     return(
         <div className={styles.tabela}>
-            <DiaSemana nomeDia='Segunda-Feira'/>
-            <DiaSemana nomeDia='Terça-Feira'/>
-            <DiaSemana nomeDia='Quarta-Feira'/>
-            <DiaSemana nomeDia='Quinta-Feira'/>
-            <DiaSemana nomeDia='Sexta-Feira'/>
+            <DiaSemana nomeDia='Segunda'/>
+            <DiaSemana nomeDia='Terça'/>
+            <DiaSemana nomeDia='Quarta'/>
+            <DiaSemana nomeDia='Quinta'/>
+            <DiaSemana nomeDia='Sexta'/>
         </div>
         )
 }

@@ -8,8 +8,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 10px;
 }
 
 .horarios{
     border-bottom: 1px #fff solid;
+}
+
+@media screen and (min-width: 750px) {
+    .nome_dia{
+        font-size: 16px;
+    }
 }

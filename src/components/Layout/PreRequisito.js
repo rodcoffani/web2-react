@@ -15,7 +15,7 @@ function PreRequisito({requisitos}){
         const requisitosArray = requisitos.map((requisito) =>
             <div className={styles.informacao}>{requisito}</div>
         )
-        contentRequisito = (<div><div className={styles.requisitoDesktop}>Requisitos: {requisitosArray}</div><span className={styles.requisitoMobile}>Tem pré-requisito: <FontAwesomeIcon icon={faCheck} className={styles.check}/></span></div>)
+        contentRequisito = (<div><div className={styles.requisitoDesktop}>{requisitosArray}</div><span className={styles.requisitoMobile}>Tem pré-requisito: <FontAwesomeIcon icon={faCheck} className={styles.check}/></span></div>)
     }
     return <p className={styles.informacao}>{contentRequisito}</p>
 }

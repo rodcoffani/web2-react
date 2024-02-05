@@ -23,7 +23,22 @@
 .materias{
     width: 80%;
     height: 70%;
-    display: grid;
-    grid-template-columns: 28% 70%;
-    gap: 0 2%;
+}
+
+.grade_ativa{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px 0px;
+}
+
+@media screen and (min-width: 750px) {
+    .botao_grade_horaria{
+        display: none;
+    }
+
+    .materias{
+        display: grid;
+        grid-template-columns: 28% 70%;
+        gap: 0 2%;
+    }
 }
