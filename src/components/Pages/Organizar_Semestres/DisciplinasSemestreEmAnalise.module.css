@@ -1,5 +1,13 @@
 .disciplinas_semestre{
+<<<<<<< Updated upstream:src/components/Pages/Organizar_Semestres/DisciplinasSemestreEmAnalise.module.css
     background-color: #CCCCCC;
     border-radius: 20px;
     height: 80%;
 }
+=======
+    border-radius: 10px;
+    height: 80%;
+    overflow: hidden;
+}
+
+>>>>>>> Stashed changes:src/components/Pages/OrganizarSemestres/DisciplinasSemestreEmAnalise.module.css
