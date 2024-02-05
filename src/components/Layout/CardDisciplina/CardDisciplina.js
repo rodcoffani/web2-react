@@ -1,6 +1,6 @@
 import styles from './CardDisciplina.module.css'
 
-import PreRequisito from './PreRequisito'
+import PreRequisito from '../PreRequisito/PreRequisito'
 
 function CardDisciplina({nomeDisciplina, sigla, categoria, creditos, requisitos}){
 

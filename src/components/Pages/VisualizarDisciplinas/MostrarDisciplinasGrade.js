@@ -1,12 +1,12 @@
 import { useState } from 'react'
 
-import CardDisciplinasGrade from '../../Layout/CardDisciplinasGrade'
+import CardDisciplinasGrade from '../../Layout/CardDisciplinaGrade/CardDisciplinasGrade'
 
 import styles from './MostrarDisciplinasGrade.module.css'
 
 function MostrarDisciplinasGrade({grupo}){
     
-    var disciplinas = grupo.disciplinas, requisitosArray
+    var disciplinas = grupo.disciplinas
 
     const [semestreFechado, setSemestreFechado] = useState(false)
 
