@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import CardDisciplina from '../../Layout/CardDisciplina/CardDisciplina'
+import CardDisciplina from '../../Layout/CardDisciplina'
 
 import styles from './MostrarSemestre.module.css'
 
